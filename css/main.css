@@ -1,3 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;700;900&display=swap');
+
 .wrapper {
     background-color: #b07cf7;
+    font-family: 'Raleway', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.title {
+    margin: 0 auto;
+    text-align: center;
+    width: 570px;
+    color: #ffffff;
+}
+
+.articles-set {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+.articles {
+    width: 370px;
+    height: 310px;
+    background-color: #ffffff;
+    /* background: linear-gradient(transparent, transparent 60%, #000000); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.article-1 {
+    background-image: url('../img/1.png');
+}
+
+.article-2 {
+    background-image: url('../img/2.png');
+}
+
+.article-3 {
+    background-image: url('../img/3.png');
 }
