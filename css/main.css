@@ -1,30 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;700;900&display=swap');
 
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
 .wrapper {
+    height: 100%;
     background-color: #b07cf7;
     font-family: 'Raleway', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 100px;
 }
 
 .title {
     margin: 0 auto;
     text-align: center;
-    width: 570px;
+    width: 560px;
     color: #ffffff;
 }
 
-.articles-set {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
+.title h1 {
+    font-size: 4rem;
+    margin: 0;
 }
 
 .articles {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.article {
+    position: relative;
     width: 370px;
-    height: 310px;
+    height: 300px;
     background-color: #ffffff;
-    /* background: linear-gradient(transparent, transparent 60%, #000000); */
-    background-repeat: no-repeat;
-    background-size: cover;
     background-position: center;
 }
 
@@ -38,4 +53,20 @@
 
 .article-3 {
     background-image: url('../img/3.png');
+}
+
+.article-description {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(transparent, transparent 60%, #000000);
+    color: #ffffff;
+}
+
+.date {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.3);
 }
