@@ -101,15 +101,56 @@ body {
     width: 200px;
 }
 
-button {
+.button-flip {
     height: 100%;
     width: 100%;
-    background-color: #f72b3b;
-    border: none;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-    font-family: 'Raleway', 'Arial Narrow', Arial, sans-serif;
-    color: #ffffff;
+    color: #fff;
     font-size: 20px;
+    line-height: 40px;
+    position: relative;
+    text-align: center;
+    letter-spacing: 1px;
+    display: inline-block;
+    text-decoration: none;
     text-transform: uppercase;
+}
+
+.button-flip:hover:after {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+}
+
+.button-flip:hover:before {
+    opacity: 0;
+    transform: translateY(50%) rotateX(90deg);
+}
+
+.button-flip:after {
+    top: 0;
+    left: 0;
+    opacity: 0;
+    display: block;
+    width: 100%;
+    color: #323237;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+    position: absolute;
+    background: #adadaf;
+    content: attr(data-back);
+    transform: translateY(-50%) rotateX(90deg);
+}
+
+.button-flip:before {
+    top: 0;
+    left: 0;
+    opacity: 1;
+    display: block;
+    color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+    position: relative;
+    background-color: #f72b3b;
+    content: attr(data-front);
+    transform: translateY(0) rotateX(0);
     cursor: pointer;
 }
